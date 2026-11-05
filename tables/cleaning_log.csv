@@ -1,0 +1,32 @@
+timestamp,step,rows_before,rows_after,rows_removed,reason
+2026-11-05T01:11:37,ext_stations,60460,1743,58717,"kept service points with means of transport TRAIN and coordinates, deduplicated by name and coordinates"
+2026-11-05T01:11:38,ext_municipalities,2136,2110,26,"kept Gemeindegebiet in CH; dropped lakes, Kommunanz and enclaves of LI/DE/IT"
+2026-11-05T01:11:39,ext_income,2175,2148,27,dropped canton and country total rows of the ESTV sheets
+2026-11-05T01:11:39,ext_income_in_boundaries,2148,2098,50,ESTV 2022 BFS numbers not found in 2026 boundaries (municipality mergers 2022-2026)
+2026-11-05T01:11:39,ext_boundaries_with_income,2110,2098,12,2026 municipalities without ESTV 2022 income (merged since 2022 or values suppressed)
+2026-11-05T01:11:40,clean_0_input,17173,17173,0,rows read from data/interim/listings_parsed.csv
+2026-11-05T01:11:40,clean_1a_zero_placeholders,17173,17173,0,"0 treated as missing (placeholder, not a value): {'rent_gross': 117, 'rent_net': 19, 'area_m2': 37}"
+2026-11-05T01:11:40,clean_1b_fill_gross_rent,17173,17173,0,rent_gross = rent_net + rent_charges for 1815 rows
+2026-11-05T01:11:40,clean_1c_drop_no_rent,17173,16845,328,"no gross rent (net rent without charges, or no rent at all)"
+2026-11-05T01:11:40,clean_1d_has_area,16845,16845,0,2959 rows without area kept with has_area=False (no price_m2); year_built 69% missing -> not used in models
+2026-11-05T01:11:40,clean_2_data_types,16845,16845,0,"rooms/prices/area/lat/lon float, floor/year_built Int64 (ground floor 0), id and zip string, is_furnished/is_temporary bool, features -> has_balcony/has_lift/has_parking/has_minergie (0/1)"
+2026-11-05T01:11:40,clean_5a_object_types,16845,15534,1311,"kept ['APARTMENT', 'DUPLEX', 'ATTIC_FLAT', 'LOFT', 'ROOF_FLAT', 'TERRACE_FLAT', 'STUDIO', 'BACHELOR_FLAT']; removed {'FURNISHED_FLAT': 744, 'SINGLE_ROOM': 564, 'ATTIC': 3}"
+2026-11-05T01:11:40,clean_5b_furnished_temporary,15534,14312,1222,removed furnished (1058) and temporary (818) listings
+2026-11-05T01:11:40,clean_5c_duplicate_ids,14312,14312,0,duplicate listing ids
+2026-11-05T01:11:40,clean_5d_duplicate_flats,14312,14150,162,"same ['street', 'zip', 'rooms', 'area_m2', 'rent_gross'] (first kept; only rows with all five values)"
+2026-11-05T01:11:40,clean_6_price_m2,14150,14150,0,new column price_m2 = rent_gross / area_m2 for 11753 rows with area
+2026-11-05T01:11:40,clean_3_range_rent_gross,14150,14110,40,rent_gross outside 300 to 15000
+2026-11-05T01:11:40,clean_3_range_area_m2,14110,14084,26,area_m2 outside 15 to 400
+2026-11-05T01:11:40,clean_3_range_rooms,14084,14082,2,rooms outside 1 to 10
+2026-11-05T01:11:40,clean_3_range_price_m2,14082,14065,17,price_m2 outside 5 to 100
+2026-11-05T01:11:40,clean_3_range_floor,14065,14065,0,floor outside -5 to 50 set to missing for 5 rows (rows kept)
+2026-11-05T01:11:40,clean_3_range_coordinates,14065,14065,0,coordinates outside CH_BBOX set to missing (geocoded in 05_integrate.py) for 0 rows
+2026-11-05T01:11:40,clean_4_outliers,14065,14065,0,"528 rows flagged is_outlier: price_m2 outside 4.0 to 45.3 CHF/m2 (1.5 x IQR, global); flag only, rows kept"
+2026-11-05T01:11:44,integrate_1_geocode,0,0,0,listings without coordinates that got coordinates from geo.admin.ch (rows removed = not found); exact_location = own coordinates and street (12532 listings)
+2026-11-05T01:11:44,integrate_2a_municipality_within,14065,14065,0,"listings inside a municipality polygon (the others: no coordinates, lake, border or foreign territory)"
+2026-11-05T01:11:44,integrate_2b_municipality_nearest,0,0,0,listings outside all polygons that got the nearest municipality within 500 m
+2026-11-05T01:11:44,integrate_2c_municipality_final,14065,14065,0,listings with a municipality (bfs_nr) after both steps
+2026-11-05T01:11:44,integrate_3_station_distance,14065,14065,0,listings with nearest railway station among 1743 stations (straight-line distance)
+2026-11-05T01:11:44,integrate_4_income_merge,14065,13961,104,listings with income_mean; unmatched = municipalities merged after 2022 (no ESTV 2022 value) or no municipality
+2026-11-05T01:11:44,integrate_5_outliers_per_canton,14065,14065,0,"449 rows flagged is_outlier (price_m2 outside 1.5 x IQR per canton); flag only, rows kept"
+2026-11-05T01:11:44,integrate_6_municipality_summary,14065,1451,12614,listings with municipality -> 1451 municipalities with listings; 490 with at least 5 listings that have price_m2
