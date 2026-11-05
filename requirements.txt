@@ -1,0 +1,17 @@
+requests
+selenium
+beautifulsoup4
+lxml
+pandas
+numpy
+pyarrow
+geopandas
+shapely
+pyogrio
+scikit-learn
+scipy
+matplotlib
+seaborn
+openpyxl
+tqdm
+markdown

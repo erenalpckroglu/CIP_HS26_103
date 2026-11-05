@@ -1,0 +1,11 @@
+data/raw/
+data/interim/
+data/processed/*.parquet
+data/processed/*.gpkg
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+report/report.html
+report/*.pdf
