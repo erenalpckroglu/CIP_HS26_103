@@ -1,4 +1,6 @@
-# swiss-rent-drivers
+# Residential rents in Switzerland: what drives them?
+
+Course repository `CIP_HS26_103` (HSLU, module CIP, HS26, group 103).
 
 **What drives residential rents in Switzerland?** A data pipeline and analysis that scrapes rental apartment listings (Selenium), combines them with open data on railway stations, municipality boundaries and taxable income, and studies what is associated with rents: the dwelling itself, the distance to a railway station, and the municipality it lies in (with choropleth maps).
 
@@ -83,7 +85,7 @@ Developed as a course project in the HSLU MSc Applied Information and Data Scien
 ## Repository layout
 
 ```
-swiss-rent-drivers/
+CIP_HS26_103/
   README.md
   requirements.txt
   docs/                    feasibility study, robots.txt copy, data collection notes, Selenium interaction log

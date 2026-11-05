@@ -93,4 +93,4 @@ The map (Figure 5) shows the spatial pattern: the highest classes (27.5 to 64.3 
 
 **Outlook.** Repeated scrapes would allow changes over time and a comparison of asking and contract rents; a hedonic model with municipality or distance-to-centre effects, travel times to stations and the ARE quality classes would separate the location components better; a second listing platform would test how representative the data are.
 
-**Sources.** Flatfox (flatfox.ch, accessed 3 November 2026); SBB, atlas service points, opentransportdata.swiss; swisstopo, swissBOUNDARIES3D (release 2026-01); Federal Tax Administration ESTV, direct federal tax statistics by municipality, tax year 2022. Code and data preparation: repository `swiss-rent-drivers`.
+**Sources.** Flatfox (flatfox.ch, accessed 3 November 2026); SBB, atlas service points, opentransportdata.swiss; swisstopo, swissBOUNDARIES3D (release 2026-01); Federal Tax Administration ESTV, direct federal tax statistics by municipality, tax year 2022. Code and data preparation: repository `CIP_HS26_103`.
