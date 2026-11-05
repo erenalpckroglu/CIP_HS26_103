@@ -77,10 +77,21 @@ Plain `requests` calls to listing pages are answered with HTTP 403 and loading e
 
 A cross-check of 10 saved listing pages shows that rents, rooms and areas in the JSON differ from the detail pages for many listings (`tables/parse_crosscheck.csv`). Which version is the true advertised rent cannot be decided from outside; the analysis uses the JSON values (the numbers shown on the search cards). This is discussed as a limitation in the report.
 
-## Team
+## Team and contributions
 
 Developed as a course project in the HSLU MSc Applied Information and Data Science (module Data Collection, Integration and Preprocessing, HS26) by **Ibtihel Frini**, **Yasna Ahmad** and **Erenalp Çakiroğlu**. The research questions and data sources come from the joint feasibility study ([`docs/`](docs/)).
 
+| Part | Author |
+|---|---|
+| Feasibility study (research questions, data sources, risks) | Ibtihel Frini, Yasna Ahmad, Erenalp Çakiroğlu |
+| RQ1, dwelling characteristics and rent: `src/06_rq1.py` and its functions, `figures/rq1_*`, `tables/rq1_*` | Yasna Ahmad |
+| RQ2, railway station distance and price per m²: `src/07_rq2.py` and its functions, `figures/rq2_*`, `tables/rq2_*` | Ibtihel Frini |
+| RQ3, municipality context, income scatter and maps: `src/08_rq3_maps.py` and its functions, `figures/rq3_*`, `tables/rq3_*` | Erenalp Çakiroğlu |
+| Shared parts: `src/config.py`, `src/utils.py` (constants, polite session, rate limiter, cleaning log) | Erenalp Çakiroğlu |
+| Shared parts: `src/01_external_data.py` (open data download and preparation, incl. railway stations) | Ibtihel Frini |
+| Shared parts: `src/02_collect_listings.py`, `src/03_parse_listings.py` (Selenium collection, parsing, cross-check) | Erenalp Çakiroğlu |
+| Shared parts: `src/04_clean.py`, `src/05_integrate.py` (cleaning, integration) | Yasna Ahmad |
+| Shared parts: `report/report.md`, `src/09_build_report.py`, this README | Erenalp Çakiroğlu |
 
 ## Repository layout
 
