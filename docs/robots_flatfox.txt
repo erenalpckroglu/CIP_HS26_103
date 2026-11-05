@@ -1,0 +1,16 @@
+# Copy of https://flatfox.ch/robots.txt downloaded on 2026-11-03 (HTTP 200)
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*/publi/goal/
+Disallow: /*/partner/
+Disallow: /*/temp/
+Disallow: /*/lang/
+Disallow: /*/change-language/
+Disallow: /*/sprache-aendern/
+Disallow: /*/cockpit/
+
+Host: flatfox.ch
+Sitemap: https://flatfox.ch/sitemap-index.xml
+
