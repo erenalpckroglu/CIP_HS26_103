@@ -1,0 +1,101 @@
+id,field,html,json,status
+86498841,rent_gross,3765.0,3690.0,differs
+86498841,rent_net,,,both missing
+86498841,rent_charges,,,both missing
+86498841,rooms,4,4.5,differs
+86498841,area_m2,113.0,111.0,differs
+86498841,floor,,,both missing
+86498841,year_built,,,both missing
+86498841,has_balcony,True,True,match
+86498841,has_lift,True,True,match
+86498841,has_parking,True,True,match
+86499196,rent_gross,2770.0,2770.0,match
+86499196,rent_net,2460.0,2460.0,match
+86499196,rent_charges,310.0,310.0,match
+86499196,rooms,2.5,2.5,match
+86499196,area_m2,76.0,76.0,match
+86499196,floor,3.0,3,match
+86499196,year_built,1985.0,1985,match
+86499196,has_balcony,False,False,match
+86499196,has_lift,True,True,match
+86499196,has_parking,False,False,match
+86503670,rent_gross,2920.0,2680.0,differs
+86503670,rent_net,2565.0,2490.0,differs
+86503670,rent_charges,225.0,190.0,differs
+86503670,rooms,2.5,2.5,match
+86503670,area_m2,54.0,55.0,differs
+86503670,floor,21.0,21,match
+86503670,year_built,2026.0,2026,match
+86503670,has_balcony,True,True,match
+86503670,has_lift,True,True,match
+86503670,has_parking,False,False,match
+86504554,rent_gross,,,both missing
+86504554,rent_net,3815.0,3600.0,differs
+86504554,rent_charges,,,both missing
+86504554,rooms,2,2.5,differs
+86504554,area_m2,77.0,80.0,differs
+86504554,floor,5.0,5,match
+86504554,year_built,,,both missing
+86504554,has_balcony,True,True,match
+86504554,has_lift,False,False,match
+86504554,has_parking,False,False,match
+86505655,rent_gross,1160.0,1045.0,differs
+86505655,rent_net,,,both missing
+86505655,rent_charges,,,both missing
+86505655,rooms,1.5,1.5,match
+86505655,area_m2,,,both missing
+86505655,floor,2.0,2,match
+86505655,year_built,,,both missing
+86505655,has_balcony,False,False,match
+86505655,has_lift,False,False,match
+86505655,has_parking,False,False,match
+86506489,rent_gross,1615.0,1540.0,differs
+86506489,rent_net,,,both missing
+86506489,rent_charges,,,both missing
+86506489,rooms,3,3.0,match
+86506489,area_m2,,,both missing
+86506489,floor,1.0,1,match
+86506489,year_built,,,both missing
+86506489,has_balcony,True,True,match
+86506489,has_lift,False,False,match
+86506489,has_parking,False,False,match
+86507084,rent_gross,1030.0,1030.0,match
+86507084,rent_net,980.0,980.0,match
+86507084,rent_charges,50.0,50.0,match
+86507084,rooms,1,1.0,match
+86507084,area_m2,18.0,18.0,match
+86507084,floor,1.0,1,match
+86507084,year_built,1923.0,1923,match
+86507084,has_balcony,False,False,match
+86507084,has_lift,False,False,match
+86507084,has_parking,False,False,match
+86507098,rent_gross,1010.0,980.0,differs
+86507098,rent_net,945.0,900.0,differs
+86507098,rent_charges,90.0,80.0,differs
+86507098,rooms,1.5,1.0,differs
+86507098,area_m2,31.0,27.0,differs
+86507098,floor,1.0,1,match
+86507098,year_built,,,both missing
+86507098,has_balcony,False,False,match
+86507098,has_lift,False,False,match
+86507098,has_parking,False,False,match
+86507882,rent_gross,2865.0,2630.0,differs
+86507882,rent_net,,,both missing
+86507882,rent_charges,,,both missing
+86507882,rooms,2.5,2.5,match
+86507882,area_m2,76.0,70.0,differs
+86507882,floor,5.0,5,match
+86507882,year_built,,,both missing
+86507882,has_balcony,True,True,match
+86507882,has_lift,True,True,match
+86507882,has_parking,False,False,match
+86510671,rent_gross,4615.0,3980.0,differs
+86510671,rent_net,,,both missing
+86510671,rent_charges,,,both missing
+86510671,rooms,4.5,4.5,match
+86510671,area_m2,,,both missing
+86510671,floor,,,both missing
+86510671,year_built,,,both missing
+86510671,has_balcony,True,True,match
+86510671,has_lift,False,False,match
+86510671,has_parking,True,True,match
