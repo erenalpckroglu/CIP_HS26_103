@@ -1,0 +1,16 @@
+model,metric,value
+linear_regression,n_train,6593.0
+linear_regression,n_test,1649.0
+linear_regression,mae_chf,486.3
+linear_regression,r2,0.452
+baseline_median_per_rooms,n_train,6593.0
+baseline_median_per_rooms,n_test,1649.0
+baseline_median_per_rooms,mae_chf,544.0
+baseline_median_per_rooms,r2,0.2
+linear_regression,intercept,356.7
+linear_regression,coef_area_m2,19.6
+linear_regression,coef_rooms,-22.2
+linear_regression,coef_floor,44.7
+linear_regression,coef_has_balcony,8.2
+linear_regression,coef_has_lift,170.7
+linear_regression,coef_has_parking,-35.7
